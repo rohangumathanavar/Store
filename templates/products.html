@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+{{ id }}<br><br>
+{{mesg}}
+<center>
+    <table>
+        <tr>
+        <th>Product-id</th>
+        <th>Product-name</th>
+        <th>Rate</th>
+            <th>Quantity</th>
+        </tr>
+        {% for i in data %}
+        <form method="POST" action="">
+         <tr>
+        <td><input type="text" value="{{i[0]}}" name="pid"></td>
+        <td>{{i[1]}}</td>
+        <td>{{i[2]}}</td>
+            <td><input type="number" name="qty" max="10000" min="0"></td>
+            <td><button type="submit">Add to cart</button></td>
+    </form>
+
+    </tr>
+    {% endfor %}
+    </table>
+</center>
+</body>
+</html>

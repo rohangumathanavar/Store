@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View</title>
+</head>
+<body>
+<center>
+    <table>
+        <tr>
+            <th>User-id</th>
+            <th>User-Name</th>
+            <th>Pid</th>
+            <th>Product_name</th>
+            <th>Qunatity</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+            <td>{{i[4]}}</td>
+            <td> <a href="{{url_for('qtyedit',pid=i[2],uid=i[0])}}"><button type="button">Qunatity Edit</button></a></td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+
+</body>
+</html>

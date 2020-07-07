@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Main_page</title>
+
+</head>
+<body >
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+
+</div>
+
+
+<form action="" method="post">
+<br>
+<h1 style="color:white; font-size:70px; text-align:right;"></h1><p align="center">
+	<a href="{{ url_for('sikttu') }}"><button type="button">Employee</button></a>
+    <a href="{{url_for('adminlogin')}}"><button type="button">Admin</button></a>
+</p>
+</form>
+</body>
+</html>

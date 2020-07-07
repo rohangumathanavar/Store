@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <table>
+        <tr>
+            <th>Product-id</th>
+            <th>Product-name</th>
+            <th>Rate</th>
+        </tr>
+        {% for i in data %}
+       <tr>
+           <td>{{i[0]}}</td>
+           <td>{{i[1]}}</td>
+           <td>{{i[2]}}</td>
+           <td><a href="{{url_for('product_rate',id=i[0])}}"><button>Rate_update</button></a></td>
+       </tr>
+        {% endfor %}
+    </table>
+</center>
+
+</body>
+</html>

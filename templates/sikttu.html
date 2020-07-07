@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>answer sikttu</title>
+</head>
+<body>
+<form action="" method="post">
+  <br><br>
+    <a href="{{ url_for('studentlogin') }}"><button type="button">New-User</button></a>
+   <center>
+        user-id : <input type="text" name="rol"  ><br><br>
+        <button type="submit">Search</button>
+    </center>
+<table>
+    <tr>
+        <th>User-id</th>
+        <th>User-name</th>
+        <th>phno</th>
+
+    </tr>
+    {% for i in data %}
+    <tr>
+        <td>{{i[0]}}</td>
+        <td>{{i[1]}}</td>
+        <td>{{i[2]}}</td>
+<td><a href="{{url_for('products',id=i[0])}}"><button type="button">products</button></a></td>
+    {% endfor %}
+</table>
+
+</form>
+
+</body>
+</html>

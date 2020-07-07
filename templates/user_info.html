@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User information</title>
+</head>
+<body>
+<center>
+<h1>User Information</h1>
+    <table>
+        <tr>
+            <th>Userid
+            </th>
+            <th>
+                UserName
+            </th>
+            <th>PhnoneNumber</th>
+        </tr>
+        {%for  i in data %}
+        <tr>
+                <td>{{i[0]}}</td>
+               <td>{{i[1]}}</td>
+               <td>{{i[2]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+</body>
+</html>
