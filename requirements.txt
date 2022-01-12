@@ -28,7 +28,7 @@ mysql-connector==2.2.9
 mysqlclient==1.4.4
 nbformat==5.0.7
 pigar==0.10.0
-pipenv==2020.6.2
+pipenv==2022.1.8
 pycparser==2.20
 PyMySQL==0.9.3
 pyrsistent==0.16.0
